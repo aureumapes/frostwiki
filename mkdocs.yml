@@ -23,10 +23,10 @@ theme:
 extra:
   alternate:
     - name: English
-      link: /en/
+      link: /NeoFrostWiki/en/
       lang: en
     
     - name: Deutsch
-      link: /de/
+      link: /NeoFrostWiki/de/
       lang: de
     
