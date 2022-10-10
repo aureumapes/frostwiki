@@ -384,15 +384,10 @@ Now lets focus on the `"(TargetPath)"`, you just need to locate your **Mods** fo
 
   
 
-Now finally replace the with your copied path, and the first half is done! (I should probably do some video about it or add more screenshots ASAP).
-
+Now finally replace the with your copied path, and the first half is done!
   
 
-Now, in the **Pre-build event command line** add this: `tasklist /fi "imagename eq SlimeRancher.exe" |find ":" > nul if errorlevel 1 taskkill /f /im "SlimeRancher.exe"`.
-
-  
-
-The command we‘ve written in the **Post-build event command line** wont run if the game is already open, this command here forces the game to close, making it easier for us to copy that **.dll** file into the **Mods** folder.
+The command we‘ve written in the **Post-build event command line** will make it easier for us to copy that **.dll** file into the **Mods** folder.
 
   
 
