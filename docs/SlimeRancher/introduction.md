@@ -4,3 +4,4 @@ First of all, the most important thing to know is that we're going to be using S
 
 ## Chapter 1 - The basics
 [1: Getting started](../tutorials/getting_started/)
+[2: Making a crate vaccable](..tutorials/cratevacc/)
