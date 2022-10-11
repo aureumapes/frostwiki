@@ -1,4 +1,4 @@
-# Planning
+# Creating vaccable crates
 Slime Rancher is a really complicated game to mod, so we will start with something that's simple: We all know that we can't collect crates, they stick on the vacuum gun and you can shoot them... but what if we can vacuum them? And that's what we are going to do!
 
 ## Definitions
