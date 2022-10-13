@@ -23,8 +23,8 @@ The creator explained it on the github of SRML.
 The creator explained it on the github of SRML.
 
 
-How to start
-------------
+**How to start** 
+------------------
 Time to insert this code snippet in the Load or PostLoad function in our main class, you can choice where to put.
 
 ```csharp
@@ -35,7 +35,7 @@ SRSingleton<GameContext>.Instance.LookupDirector.GetPrefab(Identifiable.Id.CRATE
 ```
 Don‘t think I‘ll let you simply copy paste my code tho, it‘s time to explain what it does!
 
-## First Line
+### First Line
 
 ```csharp
 AmmoRegistry.RegisterAmmoPrefab(PlayerState.AmmoMode.DEFAULT, SRSingleton<GameContext>.Instance.LookupDirector.GetPrefab(Identifiable.Id.CRATE_PARTY_01));
@@ -59,7 +59,7 @@ We are getting the `GameContext(SRSingleton<GameContext>.Instance)` to then get 
 TL;DR (the second parameter) We are getting the `GameObject` of our Crate.
 
 
-## Second Line
+### Second Line
 
 ```csharp
 Sprite icon = SRSingleton<SceneContext>.Instance.PediaDirector.entries.First((PediaDirector.IdEntry x) => x.id == PediaDirector.Id.ORNAMENTS).icon;
@@ -77,7 +77,7 @@ Like with the `LookupDirector`, we are getting the `PediaDirector` from the Scen
 `entries.First((PediaDirector.IdEntry x) => x.id == PediaDirector.Id.ORNAMENTS).icon` means that we are targeting the Ornaments (These christmas-looking balls), getting an icon from some sort of object. You can change the `PediaDirector.Id` to the object that you want to have the image
 
 
-## Third Line
+### Third Line
 ```csharp
 LookupRegistry.RegisterVacEntry(Identifiable.Id.CRATE_PARTY_01, new Color32(138, 87, 40, 255), icon);
 ```
@@ -90,7 +90,7 @@ Here we are assigning some background color and our icon to our crate.
   
 We already have the Id and the Icon, but for the colour you will have to use a rgb sequence. You can go to this website; play around with the settings until you found your colour. Then just copy the number at the red (default 47), then green (default 50) and blue (default 159) slide and put them into the parameters of the `new Color32()`. So it would be `new Color32(47, 50, 159, 255)` (first red, then green and finally blue: This order has to be correct!). The last parameter, the 255, is needed for the transparency: You don't will need it.
 
-## Fourth Line
+### Fourth Line
 
 ```csharp
 SRSingleton<GameContext>.Instance.LookupDirector.GetPrefab(Identifiable.Id.CRATE_PARTY_01).GetComponent<Vacuumable>().size = Vacuumable.Size.NORMAL;
@@ -114,7 +114,7 @@ Large means that it will stick on the vacuum gun (like a normal crate)
 
 Giant means that it can't be collected at all, like a gordo.
 
-## Fifth/Last Line
+### Fifth/Last Line
 
 ```csharp
 TranslationPatcher.AddActorTranslation("l.crate_party_01", "Party Crate");
