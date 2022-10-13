@@ -1,7 +1,9 @@
 # Creating vaccable crates
+
 Slime Rancher is a really complicated game to mod, so we will start with something that's simple: We all know that we can't collect crates, they stick on the vacuum gun and you can shoot them... but what if we can vacuum them? And that's what we are going to do!
 
-## Definitions
+Definitions
+----------
 
 Here are the explanations of some words:
 
@@ -21,7 +23,8 @@ The creator explained it on the github of SRML.
 The creator explained it on the github of SRML.
 
 
-# How to start
+How to start
+------------
 Time to insert this code snippet in the Load or PostLoad function in our main class, you can choice where to put.
 
 ```csharp
@@ -33,6 +36,7 @@ SRSingleton<GameContext>.Instance.LookupDirector.GetPrefab(Identifiable.Id.CRATE
 Don‘t think I‘ll let you simply copy paste my code tho, it‘s time to explain what it does!
 
 ## First Line
+
 ```csharp
 AmmoRegistry.RegisterAmmoPrefab(PlayerState.AmmoMode.DEFAULT, SRSingleton<GameContext>.Instance.LookupDirector.GetPrefab(Identifiable.Id.CRATE_PARTY_01));
 ```

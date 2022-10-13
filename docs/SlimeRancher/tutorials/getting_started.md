@@ -1,4 +1,4 @@
-# Getting Started
+# **Getting Started**
 
 Requisites
 ----------
@@ -23,7 +23,7 @@ To get SRML, go on it‘s [NexusMods‘ page](https://www.nexusmods.com/slimeran
 
   
 
-Honorable Mentions
+**Honorable Mentions**
 ------------------
 
 *   mikel veesus heir: many images that I don‘t write below „credited by X“ are from mikel‘s own wiki. Also of course his SRML, without it, we would need other ways to mod.
@@ -31,7 +31,7 @@ Honorable Mentions
 
   
 
-Introduction
+**Introduction**
 ------------
 
 Now, let‘s gather up some energy, because this first tutorial will be a long and a bit complicated one. We‘re going to install a lot of stuff, so no codding at this point. Also, because I only have Windows, this is a tutorial for Windows users (yet). Because First step: Let‘s start a project!
@@ -40,7 +40,7 @@ Now, let‘s gather up some energy, because this first tutorial will be a long a
 
   
 
-Setting up the project
+**Setting up the project**
 ----------------------
 
 I assume you‘ve already installed Visual Studio (read the requisites) then set up a project in there. Now, you can use any other IDE if you have one, like JetBrain‘s Rider IDE, but VisualStudio is the only one I know that‘s free and can do what we need for modding. (So yea, this whole tutorial is basically about visual studio).
@@ -49,7 +49,7 @@ I assume you‘ve already installed Visual Studio (read the requisites) then set
 
   
 
-How to set up a new project in Visual Studio
+**How to set up a new project in Visual Studio**
 --------------------------------------------
 
 After finally installing VisualStudio, together with C#, we now need to start a project! Select a **.NET Framework Class Library for C#** Project.
@@ -88,7 +88,7 @@ Anyways for this tutorial we‘re using the name „MyFirstMod“ for the Projec
 
   
 
-Adding the needed references
+**Adding the needed references**
 ----------------------------
 
 Mentions: Because I can‘t take screenshots on my laptop, I‘m going to instead use the pictures of veesus (this is all WIP so I dont think I‘m actually going to show this to anyone, but if anyone sees this, atleast you‘re warned about screenshots not matching what I wrote until now).
@@ -137,7 +137,7 @@ See those .dll files? Those are the ones you want to use `MrPurple‘s AssemblyP
 
   
 
-The `Main.cs`, `modinfo.json` files and Build events
+**The `Main.cs`, `modinfo.json` files and Build events**
 ----------------------------------------------------
 
 Time to set up the `Main.cs`, `modinfo.json` files and to add the build events. The `Main.cs` is going to be the mod‘s entry point, the `modinfo.json` is going to be the file that allows SRML to recognize your mod as a mod and we can use build events to speed up our working. More in details later on.
@@ -146,7 +146,7 @@ Time to set up the `Main.cs`, `modinfo.json` files and to add the build events. 
 
   
 
-### Building the .dll
+### **Building the .dll**
 
 Lets start by build events. Everytime we‘re done codding our mod, we usually need to manually take the `MyFirstMod.dll` generated in `[YourRepository]/bin/Debug` (the name depends of what you‘ve chosen at the beginning, you‘ll find the SolutionsName.dll file there, in our case we‘ve written `MyFirstMod`).
 
@@ -184,7 +184,7 @@ Now naviguate to `/bin/Debug`. And there you should find your `MyFirstMod.dll` f
 
   
 
-### Main.cs
+### **Main.cs**
 
 Our first mod is almost ready to run! But there are still some steps to do. First we need to create an entry point for the mod to start execution at. SRML provides an abstract class to help us achieve this, it‘s called **ModEntryPoint** in the SRML namespace. Thanks to it, SRML will auto-detect a class extending ModEntryPoint and run the code found in certain methods inside it, those methods are **PreLoad, Load, and PostLoad**.
 
@@ -192,7 +192,7 @@ Our first mod is almost ready to run! But there are still some steps to do. Firs
 
 Important note: You usually should have a class called `Class1.cs`, we‘re going to rename it (F2) to our `Main.cs`.
 
-#### PreLoad
+#### **PreLoad**
 
 ![](https://t24465758.p.clickup-attachments.com/t24465758/c76890d3-d996-4dbd-8dd7-20843d654ec3/33DF3989-A3FA-49FA-8548-B3C300F3FFBF.jpeg)
 
@@ -206,7 +206,7 @@ Also, if we want to register (aka make so that the game can recognise it) an obj
 
   
 
-#### Load
+#### **Load**
 
 ![](https://t24465758.p.clickup-attachments.com/t24465758/3229c842-6589-4727-be76-16d22ab53d07/0043B34D-1E1D-4197-B7AD-D99105DEE82C.png)
 
@@ -214,7 +214,7 @@ Everything inside Load will be executed when the game starts. Here it‘s where 
 
   
 
-#### PostLoad
+#### **PostLoad**
 
 ![](https://t24465758.p.clickup-attachments.com/t24465758/2471b019-0480-419b-a2b1-8329d734172b/3DE68B67-DCF6-47FB-8060-4801994C5885.png)
 
@@ -222,7 +222,7 @@ Everything inside here will be executed after the game has already loaded. It‘
 
   
 
-#### The ModEntryPoint
+#### **The ModEntryPoint**
 
 So, after having explored the 3 functions, now it‘s time to see how to use the ModEntryPoint abstract class.
 
@@ -268,7 +268,7 @@ namespace MyFirstMod
 
   
 
-### modinfo.json
+### **modinfo.json**
 
 Now, the last thing to set up is the modinfo.json file. It‘s needed to SRML to recognise the mod at all.
 
@@ -302,7 +302,7 @@ Now, after saving it, select the file in your solution explorer. We can find lot
 
 ![](https://t24465758.p.clickup-attachments.com/t24465758/a9fde4d5-5558-41e5-bce2-bbc97130ee7a/3FA60380-A785-4670-8058-694879C58E82.png)
 
-Building and testing
+**Building and testing**
 --------------------
 
 Now that we have our Main.cs and modinfo.json files, it's time to build and test your mod! To build a project in visual studio, click on the **Build** tab at the top of the screen and select **Build Solution.**
@@ -347,10 +347,10 @@ I wish you good luck with your modding adventure!
 
   
 
-Optional
+**Optional**
 --------
 
-### Build events (RECOMMENDED)
+### **Build events (RECOMMENDED)**
 
 Now, to be honnest, after a while, having to drag your mod DLL everytime to the Mods folder can become tiring. For this, we can automize the proccess of it.
 
@@ -395,7 +395,7 @@ Now, to make it work, just build the mod and the game should start all by itself
 
   
 
-### MrPurple‘s AssemblyPublicizer
+### **MrPurple‘s AssemblyPublicizer**
 
 > Now, I would like to mention that this is a upgraded version of [CabbageCrow‘s AssemblyPublicizer](https://github.com/CabbageCrow/AssemblyPublicizer), but considering it has some issues that will become visible later on, we‘re using this upgraded one. Shout to [CabbageCrow](https://github.com/CabbageCrow)!
 
@@ -418,7 +418,7 @@ Now, where we use it? Wait for the **“Adding the needed references“** sectio
 
  
 
-#### Setting „Allow unsafe code“
+#### **Setting „Allow unsafe code“**
 
 Now, talking for experience (painful hours wasted for this 1 single thing), we‘re going to need to set a compiler option, else every time we‘re going to build the project it‘s going to result into an error. For this we need to set the „allow unsafe code“ option to true. There are 2 ways to achieve this, one via the IDE, one via editing the .csproj of the project.
 
