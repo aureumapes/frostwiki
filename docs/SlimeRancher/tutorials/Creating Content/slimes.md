@@ -38,7 +38,7 @@ namespace DreamSlimes.Slimes
             slimeDefinition.AppearancesDefault = new SlimeAppearance[1];
             
             // Adding an eat map to the Slime, which allows it to eat something
-            slimeDefinition.Diet.Produces = new[] { Identifiable.Id.DREAM_PLORT };
+            slimeDefinition.Diet.Produces = new[] { ModdedIds.YOUR_PLORT };
             slimeDefinition.Diet.MajorFoodGroups = new[] { SlimeEat.FoodGroup.PLORTS };
             slimeDefinition.Diet.Favorites = new[] { Identifiable.Id.SABER_PLORT };
             slimeDefinition.Diet.EatMap?.Clear();
@@ -132,6 +132,7 @@ namespace DreamSlimes.Slimes
     }
 }
 ```
+Now load the function by calling `CreateSlime.CreateYourSlime()` in your Load() function ( 1 )
 
 Creating a Pedia Entry (optional)
 -------------------------
