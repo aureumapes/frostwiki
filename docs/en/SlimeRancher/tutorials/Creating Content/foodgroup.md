@@ -1,5 +1,5 @@
 # Adding a Food Group
-If you want to add an Food Group to the Game you'll need multiple patches don.
+If you want to add an Food Group to the Game you'll need multiple patches done.
 
 First things first, define the Food Class:
 ```cs
