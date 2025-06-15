@@ -58,7 +58,7 @@ After finally installing VisualStudio, together with C#, we now need to start a 
 
 ![](https://t24465758.p.clickup-attachments.com/t24465758/60fa5fd8-e7cf-4c25-b1e2-ea1a3644d5cf/IMG_0607.png)
 
-_(Credits to_ [_veesus mikel heir_](https://github.com/veesusmikelheir) _for the image__)_
+_(Credits to_ [_veesus mikel heir_](https://github.com/veesusmikelheir) _for the image_)
 
   
 
